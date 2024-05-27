@@ -28,19 +28,21 @@ import { RxCounterClockwiseClock } from "react-icons/rx";
 import PieChart from "./components/PieChart";
 import PieChart2 from "./components/PieChart2";
 
+import Slider from "react-input-slider";
+
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="p-20 bg-[#E5E8ED] w-full min-h-screen flex items-center justify-center">
+    <div className="p-8 bg-[#E5E8ED] w-full flex items-center justify-center">
       <div className="rounded-xl w-[100%] bg-white flex">
         {/* left menu */}
-        <div className=" w-24 h-full bg-white rounded-l-xl flex flex-col items-center py-3 left-0 top-0 bottom-0">
-          <div className="md:w-12 md:h-8 lg:w-10 lg:h-8 xl:w-12 xl:h-10 2xl:w-14 2xl:h-12 rounded-lg flex items-center justify-center text-[#52459F] text-[30px] font-medium">
+        <div className=" w-24 h-full bg-white rounded-l-xl flex flex-col items-center py-5 left-0 top-0 bottom-0">
+          <div className="md:w-12 md:h-8 lg:w-10 lg:h-8 xl:w-12 xl:h-10 2xl:w-14 2xl:h-12 rounded-lg flex items-between justify-center text-[#52459F] text-[30px] font-medium">
             <RiMenu2Line />
           </div>
-          <div className=" flex items-center flex-col justify-evenly h-full">
-            <div className="md:w-12 md:h-8 lg:w-10 lg:h-8 xl:w-12 xl:h-10 2xl:w-14 2xl:h-12 rounded-lg hover:bg-[#563BFF] flex items-center justify-center hover:text-white text-[20px] sm:text-[10px] md:text-[16px] lg:text-20px font-bold text-[#D3D4DD]">
+          <div className=" flex items-center flex-col justify-between gap-[26px] pt-5 h-full">
+            <div className="md:w-12 md:h-8 lg:w-10 lg:h-8 xl:w-12 xl:h-10 2xl:w-14 2xl:h-12 rounded-lg bg-[#563BFF] flex items-center justify-center text-white text-[20px] sm:text-[10px] md:text-[16px] lg:text-20px font-bold ">
               <IoHomeOutline className="hover:bg-slate-300  hover:font-bold" />
             </div>
             <div className="md:w-12 md:h-8 lg:w-10 lg:h-8 xl:w-12 xl:h-10 2xl:w-14 2xl:h-12 rounded-lg hover:bg-[#563BFF] flex items-center justify-center hover:text-white text-[20px] sm:text-[10px] md:text-[16px] lg:text-20px font-bold text-[#D3D4DD]">
@@ -76,10 +78,10 @@ function App() {
 
         {/* right chart */}
 
-        <div className="bg-[#F7F8FC] w-[100%] rounded-r-xl p-10">
+        <div className="bg-[#F7F8FC] w-[100%] rounded-r-xl p-5">
           {/* Navbar input avatar email signal */}
 
-          <nav className="flex items-center justify-between pb-4">
+          <nav className="flex items-center justify-between pb-3">
             {/* input  */}
 
             <div className="flex items-center p-2 bg-white w-[30%] rounded-lg gap-3">
@@ -111,25 +113,25 @@ function App() {
               </div>
             </div>
           </nav>
-          <div className=" gap-5 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 grid xl:flex">
+          <div className=" gap-6 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 grid xl:flex">
             {/* left chart area-line  */}
 
             <div className="w-[60%] space-y-5">
               {/* title */}
 
               <div className="flex items-center justify-between">
-                <h1 className="text-[25px] text-[#14144B] font-bold">
+                <h1 className="text-[22px] text-[#14144B] font-bold">
                   Performance
                 </h1>
-                <p className="text-[18px] text-[#6C6A8F] font-medium">Year</p>
+                <p className="text-[17px] text-[#6C6A8F] font-medium">Year</p>
               </div>
-              <div className="bg-white w-full rounded-xl p-4">
+              <div className="bg-white w-full rounded-xl p-3">
                 <div>
                   <ApexChart />
                 </div>
               </div>
               <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-4  2xl:grid-cols-4 gap-8">
-                <div className=" bg-white w-[140px] h-[200px] flex-col flex justify-around pl-5 rounded-xl">
+                <div className=" bg-white w-[140px] h-[180px] flex-col flex justify-around pl-5 rounded-xl">
                   <div className="w-[50px] h-[50px] rounded-lg bg-[#EBF2FF] text-[#3575FF] flex items-center justify-center">
                     <MdPeopleOutline />
                   </div>
@@ -145,7 +147,7 @@ function App() {
                     </p>
                   </div>
                 </div>
-                <div className=" bg-white w-[140px] h-[200px] flex-col flex justify-around pl-5 rounded-xl">
+                <div className=" bg-white w-[140px] h-[180px] flex-col flex justify-around pl-5 rounded-xl">
                   <div className="w-[50px] h-[50px] rounded-lg bg-[#FEF0ED] text-[#F36643] flex items-center justify-center">
                     <LuCalendarClock />
                   </div>
@@ -161,7 +163,7 @@ function App() {
                     </p>
                   </div>
                 </div>
-                <div className=" bg-white w-[140px] h-[200px] flex-col flex justify-around pl-5 rounded-xl">
+                <div className=" bg-white w-[140px] h-[180px] flex-col flex justify-around pl-5 rounded-xl">
                   <div className="w-[50px] h-[50px] rounded-lg bg-[#EDEAFF] flex items-center justify-center">
                     <img src="../public/Vector.svg" alt="logo" />
                   </div>
@@ -177,7 +179,7 @@ function App() {
                     </p>
                   </div>
                 </div>
-                <div className=" bg-white w-[140px] h-[200px] flex-col flex justify-around pl-5 rounded-xl">
+                <div className=" bg-white w-[140px] h-[180px] flex-col flex justify-around pl-5 rounded-xl">
                   <div className="w-[50px] h-[50px] rounded-lg bg-[#EAFBF6] text-[#24D6A5] flex items-center justify-center">
                     <RxCounterClockwiseClock />
                   </div>
@@ -195,20 +197,20 @@ function App() {
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <h1 className="text-[25px] text-[#14144B] font-bold">
+                <h1 className="text-[22px] text-[#14144B] font-bold">
                   Daily Overview
                 </h1>
-                <button className="text-[16px] rounded-xl text-[#353361] font-bold w-[132px] bg-white h-[42px]">
+                <button className="text-[16px] rounded-xl text-[#353361] font-bold w-[132px] bg-white h-[38px]">
                   Export
                 </button>
               </div>
               <div className="flex items-center justify-between">
-                <div className="flex items-center justify-evenly bg-white rounded-xl max-w-[340px] h-[140px] p-2">
+                <div className="flex items-center justify-evenly bg-white rounded-xl w-[350px] h-[130px] p-2">
                   <div>
-                    <h1 className="text-[#15134B] font-bold text-[25px]">
+                    <h1 className="text-[#15134B] font-bold text-[22px]">
                       5,461
                     </h1>
-                    <p className="text-[#5A5881] font-bold text-[15px]">
+                    <p className="text-[#5A5881] font-bold text-[14px]">
                       Today
                     </p>
                   </div>
@@ -216,20 +218,20 @@ function App() {
                     <PieChart />
                   </div>
                   <div>
-                    <h1 className="text-[#15134B] font-bold text-[25px]">
+                    <h1 className="text-[#15134B] font-bold text-[22px]">
                       8,085
                     </h1>
-                    <p className="text-[#5A5881] font-bold text-[15px]">
+                    <p className="text-[#5A5881] font-bold text-[14px]">
                       Expected
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-evenly bg-white rounded-xl max-w-[340px] h-[140px] p-2">
+                <div className="flex items-center justify-evenly bg-white rounded-xl w-[350px] h-[130px] p-2">
                   <div>
-                    <h1 className="text-[#15134B] font-bold text-[25px]">
+                    <h1 className="text-[#15134B] font-bold text-[22px]">
                       140
                     </h1>
-                    <p className="text-[#5A5881] font-bold text-[15px]">
+                    <p className="text-[#5A5881] font-bold text-[14px]">
                       Today
                     </p>
                   </div>
@@ -237,10 +239,10 @@ function App() {
                     <PieChart2 />
                   </div>
                   <div>
-                    <h1 className="text-[#15134B] font-bold text-[25px]">
+                    <h1 className="text-[#15134B] font-bold text-[22px]">
                       120
                     </h1>
-                    <p className="text-[#5A5881] font-bold text-[15px]">
+                    <p className="text-[#5A5881] font-bold text-[14px]">
                       Expected
                     </p>
                   </div>
@@ -250,16 +252,16 @@ function App() {
 
             {/* right bar chart */}
 
-            <div className="space-y-5 w-[45%]">
+            <div className="space-y-[22px] w-[45%]">
               {/* title */}
 
               <div className="flex items-center justify-between">
-                <h1 className="text-[25px] text-[#14144B] font-bold">
+                <h1 className="text-[22px] text-[#14144B] font-bold">
                   Sessions By Device
                 </h1>
-                <p className="text-[18px] text-[#6C6A8F] font-medium">Year</p>
+                <p className="text-[16px] text-[#6C6A8F] font-medium">Year</p>
               </div>
-              <div className="bg-white rounded-xl py-8 flex items-center w-full">
+              <div className="bg-white rounded-xl py-6 flex items-center w-full">
                 <div className="w-[70%]">
                   <ApexCharts />
                 </div>
@@ -291,6 +293,87 @@ function App() {
                       </span>
                     </h2>
                   </div>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl py-3 flex flex-col space-y-4 justify-center w-full px-7">
+                <h1 className="text-[21px] text-[#15134B] font-bold">
+                  Sessions By Device
+                </h1>
+                <div className="w-full flex items-center justify-between border-b-2 pb-4">
+                  <div className="flex items-center gap-6">
+                    <p className="font-bold text-[#15134B]">Channel</p>
+                    <p className="font-bold text-[#15134B]">Traffic (%)</p>
+                  </div>
+                  <p className="font-bold text-[#15134B]">Value</p>
+                </div>
+                <div className="w-full flex items-center justify-between">
+                  <div className="flex items-center gap-12">
+                    <p className="font-bold text-[#5A5881]">Direct</p>
+                    <div>
+                      <Slider
+                        x={70}
+                        xmax={100}
+                        styles={{
+                          active: {
+                            backgroundColor: "#563BFF",
+                            height: 10,
+                          },
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <p className="font-medium text-[#5A5881]">23.28%</p>
+                </div>
+                <div className="w-full flex items-center justify-between">
+                  <div className="flex items-center gap-12">
+                    <p className="font-bold text-[#5A5881]">Direct</p>
+                    <div>
+                      <Slider
+                        x={85}
+                        xmax={100}
+                        styles={{
+                          active: {
+                            backgroundColor: "#FF815F",
+                            height: 10,
+                          },
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <p className="font-medium text-[#5A5881]">23.28%</p>
+                </div>
+                <div className="w-full flex items-center justify-between">
+                  <div className="flex items-center gap-12">
+                    <p className="font-bold text-[#5A5881]">Direct</p>
+                    <div>
+                      <Slider
+                        x={50}
+                        xmax={100}
+                        styles={{
+                          active: {
+                            backgroundColor: "#1FC695",
+                            height: 10,
+                          },
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <p className="font-medium text-[#5A5881]">23.28%</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between px-7 bg-white rounded-xl h-[130px]">
+                <div>
+                  <h1 className=" text-[20px] font-bold text-[#15134A]">
+                    Sessions By Device
+                  </h1>
+                  <p className=" text-[14px] font-medium text-[#A3ABBD]">
+                    Top Region & session
+                  </p>
+                </div>
+                <div>
+                  <button className="text-white font-bold w-[131px] h-[48px] rounded-xl bg-[#563BFF] text-[16px]">
+                    View
+                  </button>
                 </div>
               </div>
             </div>

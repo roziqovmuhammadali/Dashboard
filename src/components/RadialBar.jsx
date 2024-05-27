@@ -39,7 +39,7 @@ class ApexCharts extends Component {
             options={this.state.options}
             series={this.state.series}
             type="radialBar"
-            height={360}
+            height={230}
           />
         </div>
         <div id="html-dist"></div>

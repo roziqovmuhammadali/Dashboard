@@ -81,7 +81,7 @@ function App() {
         <div className="bg-[#F7F8FC] w-[100%] rounded-r-xl p-5">
           {/* Navbar input avatar email signal */}
 
-          <nav className="flex items-center justify-between pb-3">
+          <nav className="w-full flex items-center justify-between pb-3">
             {/* input  */}
 
             <div className="flex items-center p-2 bg-white w-[30%] rounded-lg gap-3">
@@ -116,7 +116,7 @@ function App() {
           <div className=" gap-6 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1 grid xl:flex">
             {/* left chart area-line  */}
 
-            <div className="w-[60%] space-y-5">
+            <div className="w-[60%] sm:p-3 md:p-3 lg:p-3 space-y-5">
               {/* title */}
 
               <div className="flex items-center justify-between">
@@ -130,7 +130,7 @@ function App() {
                   <ApexChart />
                 </div>
               </div>
-              <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-4  2xl:grid-cols-4 gap-8">
+              <div className="grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-2 gap-8">
                 <div className=" bg-white w-[140px] h-[180px] flex-col flex justify-around pl-5 rounded-xl">
                   <div className="w-[50px] h-[50px] rounded-lg bg-[#EBF2FF] text-[#3575FF] flex items-center justify-center">
                     <MdPeopleOutline />
@@ -204,8 +204,8 @@ function App() {
                   Export
                 </button>
               </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center justify-evenly bg-white rounded-xl w-[350px] h-[130px] p-2">
+              <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-row 2xl:flex-row w-full items-center justify-between">
+                <div className="flex items-center justify-evenly bg-white rounded-xl w-[350px] p-2 mb-2">
                   <div>
                     <h1 className="text-[#15134B] font-bold text-[22px]">
                       5,461
@@ -252,7 +252,7 @@ function App() {
 
             {/* right bar chart */}
 
-            <div className="space-y-[22px] w-[45%]">
+            <div className="space-y-[26px] w-[45%]">
               {/* title */}
 
               <div className="flex items-center justify-between">
@@ -299,17 +299,17 @@ function App() {
                 <h1 className="text-[21px] text-[#15134B] font-bold">
                   Sessions By Device
                 </h1>
-                <div className="w-full flex items-center justify-between border-b-2 pb-4">
+                <div className="w-full flex flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-row 2xl:flex-row items-center justify-between border-b-2 pb-4">
                   <div className="flex items-center gap-6">
                     <p className="font-bold text-[#15134B]">Channel</p>
                     <p className="font-bold text-[#15134B]">Traffic (%)</p>
                   </div>
                   <p className="font-bold text-[#15134B]">Value</p>
                 </div>
-                <div className="w-full flex items-center justify-between">
-                  <div className="flex items-center gap-12">
+                <div className="w-full flex flex-col xl:flex-row items-center justify-between space-y-4 xl:space-y-0 xl:space-x-4">
+                  <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-12">
                     <p className="font-bold text-[#5A5881]">Direct</p>
-                    <div>
+                    <div className="w-full xl:w-auto">
                       <Slider
                         x={70}
                         xmax={100}
@@ -324,10 +324,10 @@ function App() {
                   </div>
                   <p className="font-medium text-[#5A5881]">23.28%</p>
                 </div>
-                <div className="w-full flex items-center justify-between">
-                  <div className="flex items-center gap-12">
+                <div className="w-full flex flex-col xl:flex-row items-center justify-between space-y-4 xl:space-y-0 xl:space-x-4">
+                  <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-12">
                     <p className="font-bold text-[#5A5881]">Direct</p>
-                    <div>
+                    <div className="w-full xl:w-auto">
                       <Slider
                         x={85}
                         xmax={100}
@@ -342,10 +342,10 @@ function App() {
                   </div>
                   <p className="font-medium text-[#5A5881]">23.28%</p>
                 </div>
-                <div className="w-full flex items-center justify-between">
-                  <div className="flex items-center gap-12">
+                <div className="w-full flex flex-col xl:flex-row items-center justify-between space-y-4 xl:space-y-0 xl:space-x-4">
+                  <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-12">
                     <p className="font-bold text-[#5A5881]">Direct</p>
-                    <div>
+                    <div className="w-full xl:w-auto">
                       <Slider
                         x={50}
                         xmax={100}
@@ -361,12 +361,12 @@ function App() {
                   <p className="font-medium text-[#5A5881]">23.28%</p>
                 </div>
               </div>
-              <div className="flex items-center justify-between px-7 bg-white rounded-xl h-[130px]">
-                <div>
-                  <h1 className=" text-[20px] font-bold text-[#15134A]">
+              <div className="flex flex-col items-center justify-between px-7 sm:flex-row sm:items-center md:flex-row md:items-center lg:flex-row lg:items-center xl:flex-row 2xl:flex-row bg-white rounded-xl p-4 xl:h-[130px] 2xl:h-[130px]">
+                <div className="mb-4 sm:mb-0">
+                  <h1 className="text-[20px] font-bold text-[#15134A]">
                     Sessions By Device
                   </h1>
-                  <p className=" text-[14px] font-medium text-[#A3ABBD]">
+                  <p className="text-[14px] font-medium text-[#A3ABBD]">
                     Top Region & session
                   </p>
                 </div>

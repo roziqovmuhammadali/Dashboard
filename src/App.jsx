@@ -261,11 +261,11 @@ function App() {
                 </h1>
                 <p className="text-[16px] text-[#6C6A8F] font-medium">Year</p>
               </div>
-              <div className="bg-white rounded-xl py-6 flex items-center w-full sm:flex-col md:flex-col sm:items-center md:items-center">
+              <div className="bg-white rounded-xl py-6 flex items-center w-full sm:flex-col md:flex-col lg:flex-row">
                 <div className="w-[70%]">
                   <ApexCharts />
                 </div>
-                <div className="w-[30%] sm:flex-row md:flex md:items-center block">
+                <div className="w-[30%] sm:flex-row md:flex md:items-center lg:block">
                   <div>
                     <h1 className="font-bold text-[#626087]">Desktop</h1>
                     <h2 className="font-bold text-[#27265A]">
